@@ -11,8 +11,8 @@ android {
         applicationId = "com.mxm.secretdialer"
         minSdk = 26
         targetSdk = 34
-        versionCode = 57
-        versionName = "1.5.8"
+        versionCode = 58
+        versionName = "1.5.9"
     }
 
     buildTypes {

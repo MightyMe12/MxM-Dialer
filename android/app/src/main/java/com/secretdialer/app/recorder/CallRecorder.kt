@@ -451,7 +451,7 @@ class CallRecorder(private val context: Context) {
                     }
                 }
 
-                if (opened == null && firstInitializedRecord != null && !stopRequested) {
+                if (opened == null && firstInitializedRecord != null && !stopRequested && !isBluetooth && !isWired) {
                     opened = firstInitializedRecord
                     try {
                         opened.record.startRecording()
