@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SecretDialer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/ios_green</item>
+        <item name="colorPrimaryVariant">@color/ios_green</item>
+        <item name="colorOnPrimary">@color/ios_text_primary</item>
+        <item name="colorSecondary">@color/ios_green</item>
+        <item name="android:colorBackground">@color/ios_background</item>
+        <item name="colorSurface">@color/ios_background</item>
+        <item name="android:statusBarColor">@color/ios_background</item>
+        <item name="android:navigationBarColor">@color/ios_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorPrimary">@color/ios_text_primary</item>
+        <item name="android:textColorSecondary">@color/ios_text_secondary</item>
+    </style>
+
+    <style name="Theme.SecretDialer.InCall" parent="Theme.SecretDialer">
+    </style>
+
+    <!-- Full-screen dialog theme for ODialer-style contact detail sheet -->
+    <style name="Theme.SecretDialer.FullDialog" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <style name="KeypadButton">
+        <item name="android:layout_width">72dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:background">@drawable/bg_keypad_circle</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="KeypadLetters">
+        <item name="android:textColor">@color/ios_keypad_letters</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:letterSpacing">0.15</item>
+    </style>
+
+    <style name="KeypadButtonSmall">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">@drawable/bg_keypad_circle</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="KeypadLettersSmall" parent="KeypadLetters">
+        <item name="android:textSize">8sp</item>
+        <item name="android:letterSpacing">0.1</item>
+    </style>
+</resources>

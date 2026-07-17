@@ -1,0 +1,13 @@
+*.apk
+.gradle/
+local.properties
+/*/build/
+/*/app/build/
+.idea/
+.DS_Store
+scratch/
+/android/.gradle/
+/android/local.properties
+/android/app/build/
+/android/build/
+/android/.idea/

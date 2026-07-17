@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Private app filesDir — allows FileProvider to share call recordings -->
+    <files-path name="recordings" path="recordings/" />
+    <!-- Root filesDir coverage for any subdirectory -->
+    <files-path name="files" path="." />
+</paths>

@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ios_background"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:minHeight="40dp"
+        android:textColor="@color/ios_text_primary"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/matchList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/keypadGrid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNumber" />
+
+    <GridLayout
+        android:id="@+id/keypadGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        app:layout_constraintBottom_toTopOf="@id/btnCall"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/key1"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key2"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A B C"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key3"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D E F"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key4"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G H I"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key5"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="J K L"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key6"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M N O"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key7"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P Q R S"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key8"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="T U V"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key9"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="W X Y Z"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyStar"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="38sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false"
+                android:layout_marginTop="6dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/key0"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/keyHash"
+            style="@style/KeypadButton"
+            android:layout_margin="8dp"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:textColor="@color/ios_text_primary"
+                android:textSize="28sp"
+                android:fontFamily="sans-serif"
+                android:includeFontPadding="false" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                style="@style/KeypadLetters"
+                android:includeFontPadding="false"
+                android:layout_marginTop="-2dp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </GridLayout>
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/delete"
+        android:src="@drawable/ic_backspace"
+        android:tint="@color/ios_text_secondary"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/btnCall"
+        app:layout_constraintEnd_toStartOf="@id/btnCall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnCall" />
+
+    <ImageButton
+        android:id="@+id/btnCall"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/bg_call_button"
+        android:contentDescription="@string/app_name"
+        android:padding="18dp"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Floating Keypad Restore Button (Matches ODialer restore floating button) -->
+    <ImageButton
+        android:id="@+id/btnRestoreKeypad"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_call_button"
+        android:backgroundTint="#1C1C1E"
+        android:contentDescription="Restore Keypad"
+        android:padding="16dp"
+        android:src="@drawable/ic_keypad"
+        android:tint="#FFFFFF"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
